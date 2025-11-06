@@ -1,8 +1,8 @@
 <?php
 // Database configuration
 define('DB_HOST', 'localhost');
-define('DB_USER', 'root');
-define('DB_PASS', ''); // Replace with your MySQL password
+define('DB_USER', 'ray');
+define('DB_PASS', 'lukorito');
 define('DB_NAME', 'GROUP1');
 
 // Create database connection
