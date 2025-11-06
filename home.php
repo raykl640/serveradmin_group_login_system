@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-// Check if user is logged in
+
 if (!isset($_SESSION['user_id'])) {
     header("Location: login.php");
     exit();
@@ -9,7 +9,7 @@ if (!isset($_SESSION['user_id'])) {
 
 require_once 'db_config.php';
 
-// Fetch all registered users
+
 $sql = "SELECT id, username, email, created_at FROM users ORDER BY created_at DESC";
 $result = $conn->query($sql);
 ?>
@@ -30,7 +30,7 @@ $result = $conn->query($sql);
             background: #f5f5f5;
         }
         .navbar {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: blue
             color: white;
             padding: 15px 30px;
             display: flex;
@@ -127,14 +127,14 @@ $result = $conn->query($sql);
     <div class="navbar">
         <h1>User Management System</h1>
         <div class="user-info">
-            <span class="username">👤 <?php echo htmlspecialchars($_SESSION['username']); ?></span>
+            <span class="username"> <?php echo htmlspecialchars($_SESSION['username']); ?></span>
             <a href="logout.php">Logout</a>
         </div>
     </div>
     
     <div class="container">
         <div class="welcome">
-            <h2>Welcome, <?php echo htmlspecialchars($_SESSION['username']); ?>! 👋</h2>
+            <h2>Welcome, <?php echo htmlspecialchars($_SESSION['username']); ?>! </h2>
             <p>You are successfully logged in. Below is a list of all registered users.</p>
         </div>
         
